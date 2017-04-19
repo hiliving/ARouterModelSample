@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.guiying.androidmodulepattern"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            //给applicationId添加后缀“.debug”
+            applicationIdSuffix ".debug"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    if (!isModule.toBoolean()) {
+        compile project(':main')
+        compile project(':modelfirst')
+        compile project(':modelsecond')
+    } else {
+        compile project(':common')
+    }
+//    //路由
+//    apt "com.github.mzule.activityrouter:compiler:$rootProject.aptCompilerVersion"
+    apt 'com.github.mzule.activityrouter:compiler:1.1.7'
+}

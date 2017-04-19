@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AdrModelSample.iml" filepath="$PROJECT_DIR$/AdrModelSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modelfirst/modelfirst.iml" filepath="$PROJECT_DIR$/modelfirst/modelfirst.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modelsecond/modelsecond.iml" filepath="$PROJECT_DIR$/modelsecond/modelsecond.iml" />
+    </modules>
+  </component>
+</project>

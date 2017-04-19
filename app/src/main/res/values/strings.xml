@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AdrModelSample</string>
+    <string name="router_scheme">module</string>
+</resources>
