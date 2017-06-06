@@ -114,6 +114,8 @@ public class ModelSecondActivity extends BaseActivity implements NavigationView.
             Toast.makeText(getApplicationContext(),
                     "还在开发中O_O", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_send) {
+            Toast.makeText(getApplicationContext(),
+                    "还在开发中O_O", Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
