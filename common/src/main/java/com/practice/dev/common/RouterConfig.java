@@ -6,4 +6,5 @@ package com.practice.dev.common;
 
 public class RouterConfig {
     public static final String DEMO = "/:demo";
+    public static final String DEMO2 = "/:demo2";
 }
