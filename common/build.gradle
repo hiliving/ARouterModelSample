@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.neenbedankt.android-apt'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
+
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -22,22 +23,24 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:27.1.0'
     testCompile 'junit:junit:4.12'
     compile "com.orhanobut:logger:$rootProject.loggerVersion"
-    apt 'com.github.mzule.activityrouter:compiler:1.1.7'
-    //不稳定的
-    compile "com.github.mzule.activityrouter:activityrouter:$rootProject.routerVersion"
 
-    compile 'com.android.support:design:25.+'
+    compile 'com.github.mzule.activityrouter:activityrouter:1.2.2'
+    annotationProcessor 'com.github.mzule.activityrouter:compiler:1.1.7'
+
+    compile 'com.android.support:design:27.1.0'
     testCompile 'junit:junit:4.12'
     //依赖注解
     //依赖添加
-    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    //    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.1'
+
     compile 'com.google.code.gson:gson:2.7'
     //高级的recyclerview
     compile 'com.jude:easyrecyclerview:4.2.3'
-    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.android.support:recyclerview-v7:27.1.0'
     //rxjava
     compile 'com.squareup.retrofit2:retrofit-converters:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'

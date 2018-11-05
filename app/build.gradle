@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+
     defaultConfig {
         applicationId "com.guiying.androidmodulepattern"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -33,5 +33,7 @@ dependencies {
     }
 //    //路由
 //    apt "com.github.mzule.activityrouter:compiler:$rootProject.aptCompilerVersion"
-    apt 'com.github.mzule.activityrouter:compiler:1.1.7'
+//    apt 'com.github.mzule.activityrouter:compiler:1.1.7'
+    compile 'com.github.mzule.activityrouter:activityrouter:1.2.2'
+    annotationProcessor 'com.github.mzule.activityrouter:compiler:1.1.7'
 }
